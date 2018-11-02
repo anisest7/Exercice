@@ -13,12 +13,12 @@ export class AppComponent implements OnInit, IProfile
   firstname: string;
   lastname: string;
   avatar: string;
-users: any;
-private nbInstance: number = 0;
+  users: any;
 
-constructor(private userService: UserService){
+  private nbInstance: number = 0;
 
-}
+  constructor(private userService: UserService){}
+
 getNbInstance(): number {
    return this.nbInstance+1;
  } 
@@ -40,6 +40,7 @@ interface IProfile {
   avatar: string;
   getNbInstance(): number;
   }
+  
   interface IProfile1 {
     id: number;
     first_name: string;
